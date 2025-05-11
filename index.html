@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indian Cultures</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(270deg, #ffecd2, #fcb69f, #a18cd1, #fbc2eb);
+      background-size: 800% 800%;
+      animation: gradientBG 20s ease infinite;
+      color: #333;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1548013146-f68a12e1f2ed?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+      height: 60vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.4rem;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffeaa7;
+      transform: scale(1.1);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h2 {
+      color: #d63031;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #2d3436;
+      color: #ccc;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Exploring Indian Cultures</h1>
+    <p>Unity in Diversity</p>
+  </header>
+
+  <nav>
+    <a href="#festivals">Festivals</a>
+    <a href="#languages">Languages</a>
+    <a href="#clothing">Clothing</a>
+    <a href="#food">Food</a>
+  </nav>
+
+  <div class="container">
+    <div class="card" id="festivals">
+      <h2>Festivals</h2>
+      <p>India celebrates a wide variety of festivals such as <strong>Diwali</strong>, <strong>Holi</strong>, <strong>Navratri</strong>, <strong>Eid</strong>, <strong>Christmas</strong>, and <strong>Pongal</strong>. Each one reflects a blend of cultural heritage and religious significance.</p>
+    </div>
+    <div class="card" id="languages">
+      <h2>Languages</h2>
+      <p>India is home to 22 official languages and over 1,600 dialects. Some of the major languages include <strong>Hindi</strong>, <strong>Telugu</strong>, <strong>Tamil</strong>, <strong>Marathi</strong>, <strong>Bengali</strong>, and <strong>Gujarati</strong>.</p>
+    </div>
+    <div class="card" id="clothing">
+      <h2>Clothing</h2>
+      <p>Indian traditional clothing varies by region. Common attire includes <strong>sarees</strong>, <strong>salwar kameez</strong>, <strong>lehenga choli</strong> for women, and <strong>kurta-pajama</strong>, <strong>sherwani</strong>, <strong>dhoti</strong> for men, often made with rich textiles and embroidery.</p>
+    </div>
+    <div class="card" id="food">
+      <h2>Food</h2>
+      <p>Indian cuisine is famous worldwide. Signature dishes include <strong>butter chicken</strong>, <strong>biryani</strong>, <strong>masala dosa</strong>, <strong>chaat</strong>, and sweets like <strong>rasgulla</strong>, <strong>jalebi</strong>, and <strong>kulfi</strong>. Each region brings its own flavor to the table.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Indian Cultures. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
